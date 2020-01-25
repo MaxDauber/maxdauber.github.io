@@ -1,7 +1,7 @@
-name: Severyn Kozak
-url: https://sevko.io
+name: Max Dauber
+url: https://maxdauber.github.io
 files_url: /data
-description: Severyn Kozak's personal portfolio site and blog.
+description: Max Dauber's personal portfolio site and blog.
 permalink: /articles/:title
 markdown: kramdown
 lsi: true
