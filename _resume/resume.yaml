@@ -1,10 +1,10 @@
-firstname: Severyn
-familyname: Kozak
-github_id: github.com/sevko
-linkedin_id: linkedin.com/in/sevko
+firstname: Max
+familyname: Dauber
+github_id: github.com/MaxDauber
+linkedin_id: linkedin.com/in/MaxDauber
 bio_data:
-  email: sev@mit.edu
-  website: sevko.io
+  email: max@dauberfamily.com
+  website: maxdauber.github.io
   skills:
     details:
       -
@@ -51,12 +51,10 @@ bio_data:
   education:
     schools:
       -
-        institution: MIT
-        degree: M. Eng. in Computer Systems
-        graduation_year: "2019-'20"
+        institution: The University of Texas at Austin
+        degree: B.S. in Computer Engineering, minors in Philosophy, Business
+        graduation_year: "2017-'2021"
         details:
-          - TA for 6.172 Performance Engineering
-          - High Performance Computing research with the Supertech group
 
       -
         institution: MIT
