@@ -1,15 +1,47 @@
 ---
 layout: default
+head: |
+  <link rel="stylesheet" href="/css/post.css">
+  <link rel="stylesheet" href="/css/articles.css">
 ---
-<div id="post">
-{{ content }}
+
+<div id="meta">
+	<h1>{{ page.title }}</h1>
+	<span>{{ page.date | date_to_string }}</span>
+	<div id="tags">
+		<span>tags:</span>
+		{% for tag in page.tags %}
+			{% unless forloop.last %}
+				<a href="/articles/tags#{{ tag }}">{{ tag }}</a>,
+			{% endunless %}
+		{% endfor %}
+		<a href="/articles/tags#{{ page.tags[-1] }}">{{ page.tags[-1] }}</a>
+	</div>
 </div>
 
-<div id="related">
-  <h2>Related Posts</h2>
-  <ul class="posts">
-    {% for post in site.related_posts limit:3 %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div id="post">
+	{% if page.math %}
+		<noscript>
+			<p id="mathjax-warning">
+				<b>Warning:</b> This post contains math blocks rendered with the
+				<a href="https://www.mathjax.org/">MathJax</a> JavaScript library. If you don't enable JavaScript in
+				your browser, none of them will display.
+			</p>
+		</noscript>
+	{% endif %}
+	{% if page.toc %}
+		{{ content | toc_generate }}
+	{% else %}
+		{{ content }}
+	{% endif %}
 </div>
+
+<section id="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript" src="https://sevko.disqus.com/embed.js"></script>
+	<noscript><b id="comments-noscript">Enable JavaScript to see comments.</b></noscript>
+</section>
+
+{% if page.toc %}
+	{% include smooth_scroll.html %}
+{% endif %}
