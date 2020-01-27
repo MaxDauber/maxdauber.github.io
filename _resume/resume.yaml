@@ -12,7 +12,6 @@ bio_data:
         items:
           - Python
           - C
-          - Haskell
           - C++
           - Go
           - x86
@@ -29,7 +28,6 @@ bio_data:
           - AWS
           - MongoDB
           - Flask
-          - Node.js
       -
         type: Experience Areas
         items:

@@ -14,7 +14,7 @@ layout:
 			{% endif %}
 		</description>
 		<link>{{ site.url }}</link>
-		<atom:link href="{{ site.url }}/articles/feed.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="{{ site.url }}/blog/feed.xml" rel="self" type="application/rss+xml" />
 		{% for post in site.posts %}
 			<item>
 				<title>{{ post.title | strip_html }}</title>
@@ -31,7 +31,7 @@ layout:
 					{% if post.math %}
 						<b>Warning:</b> this post contains math blocks rendered with the
 						<a href="https://www.mathjax.org/">MathJax</a> JavaScript library. If you're using an RSS reader or
-						otherwise have Javascript disabled, none of them will display, so you should instead read this article at
+						otherwise have Javascript disabled, none of them will display, so you should instead read this post at
 						its <a href="{{ site.url }}{{ post.url }}">source</a>.
 					{% endif %}
 					{{ post.content }}>

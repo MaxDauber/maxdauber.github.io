@@ -2,7 +2,7 @@ name: Max Dauber
 url: https://maxdauber.github.io
 files_url: /data
 description: Max Dauber's personal portfolio site and blog.
-permalink: /articles/:title
+permalink: /blog/:title
 markdown: kramdown
 lsi: true
 exclude: [Gemfile, Gemfile.lock, CNAME, README.md, publish.sh, Makefile]

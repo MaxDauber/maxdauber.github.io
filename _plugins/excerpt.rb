@@ -1,4 +1,4 @@
-# A Liquid filter to extract only the first paragraph of an article, without
+# A Liquid filter to extract only the first paragraph of an post, without
 # any leading headers or other markup.
 
 require 'nokogiri'
