@@ -823,6 +823,7 @@
         margin-left: 0;
     }
     .container {
+        text-align: center;
         width: auto;
     }
     .row-fluid {
@@ -970,6 +971,7 @@
     .navbar .container {
         width: auto;
         padding: 0;
+        text-align: center;
     }
     .navbar .brand {
         padding-right: 10px;
