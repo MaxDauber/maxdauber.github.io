@@ -5,24 +5,40 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
 }
-
-body{
-    margin: 0;
-    auto;
+html, body {
+    width: 100%;
+    height: 100%;
     padding: 0;
+    margin: 0;
+}
+body{
     font-family: 'Oxanium', sans-serif;
     background-color: #101214;
     color: #7A7C80;
-
-
 }
-.container{
+
+.centered-wrapper {
+    position: relative;
+    text-align: center;
+}
+.centered-wrapper:before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 0; height: 100%;
+    vertical-align: middle;
+}
+.centered-content {
+    display: inline-block;
+    vertical-align: middle;
+}
+/* .container{
     position: absolute;
     top: 50%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
-}
+} */
 
 h2,.white{
     color: #fff;
