@@ -1,52 +1,228 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-    <link rel="stylesheet" type="text/css" href="css/profile.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="chris6.jpg">
-    <link rel="icon" type="image/png" href="assets/favicon.ico" sizes="16x16">
-    <link rel="manifest" href="data/manifest.json">
-    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#ffffff">
-
-    <style>
-        .pubtitle {
-            font-size: 18px;
-            font-style: italic;
-        }
-    </style>
-
-    <style>
-        .pubconf {
-            font-weight: bold;
-        }
-    </style>
-
-    <!--TODO add encoding-->
-    <title>Max Dauber | UT ECE</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="span3">
-            <img src="assets/mjd-headshot.jpeg" vspace="40"style="width:350px;">
-        </div>
-        <div class="span6">
-            <br>
-            <h2>Max Dauber</h2>
-            <ul class="unstyled bottom-left">
-                <li><em>academic email:</em> <a href="mailto:max.dauber@utexas.edu">max.dauber@utexas.edu</a></li>
-                <li><em>personal email:</em> <a href="mailto:max@dauberfamily.com">max@dauberfamily.com</a></li>
-                <li><em>phone:</em> (214) 842-0242</li>
-                <li><a href="https://github.com/MaxDauber">Github</a></li>
-                <li><a href="https://linkedin.com/in/MaxDauber">LinkedIn</a></li>
-                <li><a href="https://keybase.io/maxdauber">Keybase</a></li>
-                <li><a href="https://maxdauber.medium.com">Medium</a></li>
-                    <li><em>interests:</em> Applied Cryptography, Artificial Intelligence, Space Tech, National Security, Public Policy, Entrepreneurship</li>
-                <li><em>cv: </em><a href="https://www.dropbox.com/s/gx1nh8z5s0wqi7a/mjd_resume_current.pdf?dl=0">[pdf]</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;Rotating ASCII Sphere with Random Characters &amp; Animated Chain&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- Import Lexend Giga from Google Fonts --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Lexend+Giga&amp;display=swap" rel="stylesheet"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: black;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>overflow: hidden;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: 'Lexend Giga', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>canvas {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* Centered header style */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>header {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>position: absolute;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>top: 50%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>left: 50%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transform: translate(-50%, -50%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: 'Lexend Giga', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 3.5em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: rgba(0, 0, 0, 0.6);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 20px 40px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>z-index: 9999;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>pointer-events: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- Centered header --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;header&gt;Colossus Cyber&lt;/header&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Setup canvas.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const canvas = document.getElementById("canvas");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const ctx = canvas.getContext("2d");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>canvas.width = window.innerWidth;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>canvas.height = window.innerHeight;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Rotation angles.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>let A = 0, B = 0;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Sphere parameters.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const R = 800;<span class="Apple-converted-space">        </span>// sphere radius</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const K = 800;<span class="Apple-converted-space">        </span>// projection scaling factor</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const distance = 1200; // viewer distance</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Grid steps for reduced overlap.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const phiStep = Math.PI / 12;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const thetaStep = Math.PI / 12;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Character set: digits + uppercase letters.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const asciiChars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Interval range for each digit's regeneration (in milliseconds).</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const minInterval = 1500;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const maxInterval = 9000;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Array to store sphere points.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const spherePoints = [];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Fill the spherePoints array with geometry, a random initial char, and a next update time.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function generateSpherePoints() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>for (let phi = 0; phi &lt; Math.PI; phi += phiStep) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>for (let theta = 0; theta &lt; 2 * Math.PI; theta += thetaStep) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const randChar = asciiChars[Math.floor(Math.random() * asciiChars.length)];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>spherePoints.push({</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>phi,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>theta,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>ch: randChar,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>nextUpdate: Date.now() + Math.random() * (maxInterval - minInterval) + minInterval</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>generateSpherePoints();</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Data for the animated chain.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// chainData.indices holds indices (into spherePoints)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// chainData.currentSegment is how many segments are drawn.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>let chainData = generateChain();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>let lastSegmentTime = Date.now();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const segmentDelay = 2000; // milliseconds delay between segments</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Generate a chain by selecting random spherePoints (by index).</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function generateChain() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const numPoints = Math.floor(Math.random() * 5) + 4; // 4 to 8 points (3–7 connections)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const chainIndices = [];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>for (let i = 0; i &lt; numPoints; i++) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const randomIndex = Math.floor(Math.random() * spherePoints.length);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>chainIndices.push(randomIndex);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>return {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>indices: chainIndices,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>currentSegment: 0</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>};</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Project a point (given phi, theta) to screen coordinates.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function projectPoint(phi, theta) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const x = R * Math.sin(phi) * Math.cos(theta);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const y = R * Math.sin(phi) * Math.sin(theta);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const z = R * Math.cos(phi);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const cosA = Math.cos(A), sinA = Math.sin(A);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const y1 = cosA * y - sinA * z;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const z1 = sinA * y + cosA * z;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const cosB = Math.cos(B), sinB = Math.sin(B);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const x2 = cosB * x + sinB * z1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const z2 = -sinB * x + cosB * z1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const y2 = y1;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const factor = K / (distance + z2);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const x_proj = x2 * factor;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const y_proj = y2 * factor;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>return {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>x: canvas.width / 2 + x_proj,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>y: canvas.height / 2 - y_proj,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>z: z2</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>};</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function animate() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const now = Date.now();</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Update individual digits if their timer has elapsed.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>for (const sp of spherePoints) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (now &gt;= sp.nextUpdate) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>sp.ch = asciiChars[Math.floor(Math.random() * asciiChars.length)];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>sp.nextUpdate = now + Math.random() * (maxInterval - minInterval) + minInterval;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Clear the canvas.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>ctx.fillStyle = "black";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>ctx.fillRect(0, 0, canvas.width, canvas.height);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// --- Draw the sphere characters ---</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const drawnPoints = [];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>for (const sp of spherePoints) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const { phi, theta, ch } = sp;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const pos = projectPoint(phi, theta);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let brightness = 128 + ((pos.z + R) / (2 * R)) * 127;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>brightness = Math.floor(brightness);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>drawnPoints.push({</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>x: pos.x,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>y: pos.y,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>z: pos.z,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>ch,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>color: `rgb(${brightness},${brightness},${brightness})`</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Sort back-to-front.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>drawnPoints.sort((a, b) =&gt; a.z - b.z);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>ctx.font = "18px monospace";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>ctx.textAlign = "center";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>ctx.textBaseline = "middle";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>for (const p of drawnPoints) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>ctx.fillStyle = p.color;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>ctx.fillText(p.ch, p.x, p.y);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// --- Draw the chain (only complete segments) ---</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (chainData) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>ctx.beginPath();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>for (let i = 0; i &lt;= chainData.currentSegment; i++) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>if (i &gt;= chainData.indices.length) break;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const idx = chainData.indices[i];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const sp = spherePoints[idx];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const pos = projectPoint(sp.phi, sp.theta);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>if (i === 0) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>ctx.moveTo(pos.x, pos.y);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>ctx.lineTo(pos.x, pos.y);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>ctx.strokeStyle = "rgba(255,255,255,0.8)";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>ctx.lineWidth = 2;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>ctx.stroke();</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Check if it's time to add the next segment.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (now - lastSegmentTime &gt; segmentDelay) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>chainData.currentSegment++;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>lastSegmentTime = now;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>// When the chain is complete, generate a new one.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>if (chainData.currentSegment &gt;= chainData.indices.length) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>chainData = generateChain();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>lastSegmentTime = now;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Update rotation.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>A += 0.005;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>B += 0.005;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>requestAnimationFrame(animate);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>animate();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
