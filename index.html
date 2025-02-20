@@ -149,7 +149,7 @@
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       
       // --- Draw the sphere characters ---
-      const drawnPoints = [];
+      let drawnPoints = [];
       for (const sp of spherePoints) {
         const { phi, theta, ch } = sp;
         const pos = projectPoint(phi, theta);
@@ -164,13 +164,33 @@
         });
       }
 
-      // Sort back-to-front.
-      drawnPoints.sort((a, b) => a.z - b.z);
+      // --- Filter out overlapping digits ---
+      // Set a threshold distance (in pixels) for overlap.
+      const threshold = 20;
+      const acceptedPoints = [];
+      // Sort drawnPoints by descending z (frontmost first).
+      drawnPoints.sort((a, b) => b.z - a.z);
+      for (const p of drawnPoints) {
+        let overlap = false;
+        for (const q of acceptedPoints) {
+          const dx = p.x - q.x;
+          const dy = p.y - q.y;
+          if (Math.sqrt(dx*dx + dy*dy) < threshold) {
+            overlap = true;
+            break;
+          }
+        }
+        if (!overlap) {
+          acceptedPoints.push(p);
+        }
+      }
+      // Sort acceptedPoints back from back-to-front for proper drawing order.
+      acceptedPoints.sort((a, b) => a.z - b.z);
 
       ctx.font = "18px monospace";
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-      for (const p of drawnPoints) {
+      for (const p of acceptedPoints) {
         ctx.fillStyle = p.color;
         ctx.fillText(p.ch, p.x, p.y);
       }
