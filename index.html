@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Rotating ASCII Sphere with Random Characters & Animated Chain</title>
+  <!-- Ensure proper scaling on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colossus Cyber Systems Inc.</title>
   <!-- Import Lexend Giga from Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga&display=swap" rel="stylesheet">
   <style>
@@ -39,9 +41,17 @@
     // Setup canvas.
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    
+
+    // Function to resize canvas.
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    // Initial size.
+    resizeCanvas();
+    // Update canvas size on resize.
+    window.addEventListener('resize', resizeCanvas);
+
     // Rotation angles.
     let A = 0, B = 0;
     
