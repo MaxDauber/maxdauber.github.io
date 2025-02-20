@@ -17,7 +17,7 @@
     canvas {
       display: block;
     }
-    /* Centered header style */
+    /* Centered header style with responsive font-size and no wrapping */
     header {
       position: absolute;
       top: 50%;
@@ -25,7 +25,8 @@
       transform: translate(-50%, -50%);
       color: #fff;
       font-family: 'Lexend Giga', sans-serif;
-      font-size: 3.5em;
+      font-size: clamp(2em, 5vw, 3.5em);
+      white-space: nowrap;
       background: rgba(0, 0, 0, 0.6);
       padding: 20px 40px;
       z-index: 9999;
@@ -42,14 +43,12 @@
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
 
-    // Function to resize canvas.
+    // Resize canvas for mobile and desktop.
     function resizeCanvas() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     }
-    // Initial size.
     resizeCanvas();
-    // Update canvas size on resize.
     window.addEventListener('resize', resizeCanvas);
 
     // Rotation angles.
@@ -91,8 +90,6 @@
     generateSpherePoints();
 
     // Data for the animated chain.
-    // chainData.indices holds indices (into spherePoints)
-    // chainData.currentSegment is how many segments are drawn.
     let chainData = generateChain();
     let lastSegmentTime = Date.now();
     const segmentDelay = 2000; // milliseconds delay between segments
