@@ -15,24 +15,45 @@
     canvas {
       display: block;
     }
-    header {
+    .content {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       color: #fff;
-      font-family: 'Lexend Giga', sans-serif;
-      font-size: clamp(2em, 5vw, 3.5em);
-      white-space: nowrap;
+      text-align: center;
       background: rgba(0, 0, 0, 0.6);
       padding: 20px 40px;
       z-index: 9999;
       pointer-events: none;
+      border-radius: 10px;
+    }
+    .title {
+      font-family: 'Lexend Giga', sans-serif;
+      font-size: clamp(2em, 5vw, 3.5em);
+      white-space: nowrap;
+      margin-bottom: 20px;
+    }
+    .subtitle {
+      font-family: 'Lexend Giga', sans-serif;
+      font-size: clamp(1em, 2vw, 1.5em);
+      margin-bottom: 20px;
+      font-weight: 300;
+      white-space: nowrap;
+    }
+    .contact {
+      font-family: 'Lexend Giga', sans-serif;
+      font-size: clamp(0.8em, 1.5vw, 1.2em);
+      opacity: 0.8;
     }
   </style>
 </head>
 <body>
-  <header>Colossus Cyber</header>
+  <div class="content">
+    <div class="title">COLOSSUS CYBER</div>
+    <div class="subtitle">Securing the future of trust in critical organizations</div>
+    <div class="contact">Contact Us: info@colossuscyber.ai</div>
+  </div>
   <canvas id="canvas"></canvas>
   <script>
     const canvas = document.getElementById("canvas");
